@@ -75,8 +75,8 @@ Send multiple test emails using an integrated bookmarklet tool.
 
 ```bash
 # Clone the repository
-git clone https://github.com/amdom5/elqkit.git
-cd elqkit
+git clone https://github.com/amdom5/ElqKit.git
+cd ElqKit
 
 # Start the application
 docker-compose up -d
@@ -228,8 +228,8 @@ Talisman(app)
 
 ```bash
 # Clone and setup virtual environment
-git clone https://github.com/amdom5/elqkit.git
-cd elqkit
+git clone https://github.com/amdom5/ElqKit.git
+cd ElqKit
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
@@ -334,7 +334,7 @@ We welcome contributions! Please:
 4. **Health check failing**: Verify application is responding on configured port
 
 **Getting Help:**
-- Check existing [GitHub Issues](https://github.com/amdom5/elqkit/issues)
+- Check existing [GitHub Issues](https://github.com/amdom5/ElqKit/issues)
 - Review application logs: `docker logs elqkit -f`
 - Verify Docker and Docker Compose versions
 - Ensure all environment variables are properly set
