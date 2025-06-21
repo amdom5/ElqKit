@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+
+{% block title %}TestEmail - ElqKit{% endblock %}
+
+{% block description %}Send multiple test emails with bookmarklet tool. Streamline your email testing workflow with batch sending capabilities.{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tools.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="tool-container">
+    <!-- Tool Header -->
+    <div class="tool-header">
+        <div class="tool-header-content">
+            <div class="tool-icon-large">
+                <img src="{{ url_for('static', filename='images/testemail-icon.svg') }}" alt="TestEmail">
+            </div>
+            <div class="tool-info">
+                <h1 class="tool-title">TestEmail</h1>
+                <p class="tool-subtitle">Batch Test Email Sender</p>
+                <p class="tool-description">
+                    Send multiple test emails at once using a convenient bookmarklet tool. 
+                    Perfect for testing email campaigns across different recipients and scenarios.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coming Soon Content -->
+    <div class="tool-content">
+        <div class="coming-soon-container">
+            <div class="coming-soon-content">
+                <div class="coming-soon-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                </div>
+                
+                <h2>Coming Soon</h2>
+                <p class="coming-soon-description">
+                    We're developing the TestEmail tool to revolutionize your email testing workflow. Here's what's coming:
+                </p>
+                
+                <div class="feature-preview-list">
+                    <div class="feature-preview-item">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <div class="feature-content">
+                            <h4>Browser Bookmarklet</h4>
+                            <p>One-click bookmarklet that works directly in your browser from any Eloqua page</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-preview-item">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="m22 21-3-3"/>
+                        </svg>
+                        <div class="feature-content">
+                            <h4>Multiple Recipients</h4>
+                            <p>Send test emails to multiple recipients simultaneously from a single interface</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-preview-item">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14,2 14,8 20,8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                        <div class="feature-content">
+                            <h4>CSV Upload</h4>
+                            <p>Upload CSV files with email addresses and personalization data for batch testing</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-preview-item">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M9 11H1v3h8v3l3-3-3-3v3z"/>
+                            <path d="M22 12h-6"/>
+                        </svg>
+                        <div class="feature-content">
+                            <h4>Smart Integration</h4>
+                            <p>Seamlessly integrates with Eloqua's interface for a native testing experience</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bookmarklet-preview">
+                    <div class="bookmarklet-demo">
+                        <h3>How It Will Work</h3>
+                        <div class="demo-steps">
+                            <div class="demo-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Install Bookmarklet</h4>
+                                    <p>Drag the TestEmail bookmarklet to your browser's bookmark bar</p>
+                                </div>
+                            </div>
+                            
+                            <div class="demo-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Navigate to Email</h4>
+                                    <p>Go to any email in Eloqua that you want to test</p>
+                                </div>
+                            </div>
+                            
+                            <div class="demo-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Click & Send</h4>
+                                    <p>Click the bookmarklet and send tests to multiple recipients instantly</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="coming-soon-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon completed">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Concept & Research</h4>
+                            <p>User research and technical feasibility study completed</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-icon upcoming">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Bookmarklet Development</h4>
+                            <p>Building the JavaScript bookmarklet with Eloqua API integration</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-icon upcoming">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="m9 12 2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Beta Testing</h4>
+                            <p>Limited beta release for testing and feedback collection</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="coming-soon-cta">
+                    <p>Ready to streamline your email testing process?</p>
+                    <a href="{{ url_for('main.index') }}" class="btn btn-primary">
+                        Explore Other Tools
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

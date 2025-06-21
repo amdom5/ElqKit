@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block title %}BulkDelete - ElqKit{% endblock %}
+
+{% block description %}Delete multiple API syncs in Eloqua efficiently. Batch deletion tool for managing large-scale API sync cleanup.{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tools.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="tool-container">
+    <!-- Tool Header -->
+    <div class="tool-header">
+        <div class="tool-header-content">
+            <div class="tool-icon-large">
+                <img src="{{ url_for('static', filename='images/bulkdelete-icon.svg') }}" alt="BulkDelete">
+            </div>
+            <div class="tool-info">
+                <h1 class="tool-title">BulkDelete</h1>
+                <p class="tool-subtitle">Bulk API Sync Deletion</p>
+                <p class="tool-description">
+                    Efficiently delete multiple API syncs in Eloqua with batch processing capabilities. 
+                    Streamline your data management and cleanup operations.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coming Soon Content -->
+    <div class="tool-content">
+        <div class="coming-soon-container">
+            <div class="coming-soon-content">
+                <div class="coming-soon-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12,6 12,12 16,14"/>
+                    </svg>
+                </div>
+                
+                <h2>Coming Soon</h2>
+                <p class="coming-soon-description">
+                    We're hard at work building the BulkDelete tool. This powerful feature will allow you to:
+                </p>
+                
+                <div class="feature-preview-list">
+                    <div class="feature-preview-item">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <polyline points="9,11 12,14 22,4"/>
+                            <path d="m21,4-3,9-9-3"/>
+                        </svg>
+                        <div class="feature-content">
+                            <h4>Batch API Sync Deletion</h4>
+                            <p>Delete multiple API syncs at once with intelligent batch processing</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-preview-item">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        <div class="feature-content">
+                            <h4>CSV Upload Support</h4>
+                            <p>Upload CSV files containing sync IDs for bulk deletion operations</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-preview-item">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                        <div class="feature-content">
+                            <h4>Safety Checks</h4>
+                            <p>Built-in validation and confirmation steps to prevent accidental deletions</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-preview-item">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M3 3v18h18"/>
+                            <path d="m19 9-5 5-4-4-3 3"/>
+                        </svg>
+                        <div class="feature-content">
+                            <h4>Real-time Progress</h4>
+                            <p>Monitor deletion progress with detailed status updates and error handling</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="coming-soon-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon completed">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Planning & Design</h4>
+                            <p>Feature requirements and UI design completed</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-icon in-progress">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Development</h4>
+                            <p>Currently building the API integration and batch processing logic</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-icon upcoming">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="m9 12 2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Testing & Launch</h4>
+                            <p>Quality assurance testing before public release</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="coming-soon-cta">
+                    <p>Want to be notified when BulkDelete launches?</p>
+                    <a href="{{ url_for('main.index') }}" class="btn btn-primary">
+                        Return to ElqKit Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

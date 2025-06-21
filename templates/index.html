@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block title %}ElqKit - Professional Eloqua Toolkit{% endblock %}
+
+{% block description %}Professional toolkit for Eloqua automation and management. Access powerful tools for data processing, API management, and testing.{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="landing-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="{{ url_for('static', filename='images/elqkit-logo.svg') }}" alt="ElqKit" class="hero-logo-img">
+            </div>
+            <h1 class="hero-title">ElqKit</h1>
+            <p class="hero-subtitle">Professional Eloqua Toolkit</p>
+            <p class="hero-description">
+                Streamline your Eloqua operations with our suite of powerful, professional-grade tools. 
+                
+            </p>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools-section">
+        <div class="tools-container">
+            <div class="tools-grid">
+                {% for tool in tools %}
+                <div class="tool-card {% if tool.status == 'coming_soon' %}coming-soon{% endif %}" 
+                     {% if tool.status == 'active' %}onclick="window.location.href='{{ url_for(tool.route) }}'"{% endif %}>
+                    
+                    <div class="tool-icon">
+                        <img src="{{ url_for('static', filename='images/' + tool.icon) }}" 
+                             alt="{{ tool.name }}" class="tool-icon-img">
+                        {% if tool.status == 'coming_soon' %}
+                        <div class="coming-soon-badge">Coming Soon</div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="tool-content">
+                        <div class="tool-header">
+                            <h3 class="tool-name">{{ tool.name }}</h3>
+                        </div>
+                        <p class="tool-description">{{ tool.description }}</p>
+                        
+                        <div class="tool-actions">
+                            {% if tool.status == 'active' %}
+                            <button class="tool-btn primary" onclick="event.stopPropagation(); window.location.href='{{ url_for(tool.route) }}'">
+                                Launch Tool
+                                <svg class="tool-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                            {% else %}
+                            <button class="tool-btn disabled" disabled>
+                                Coming Soon
+                            </button>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Add hover effects for tool cards
+    const toolCards = document.querySelectorAll('.tool-card:not(.coming-soon)');
+    
+    toolCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+    
+    // Add click analytics (placeholder for future implementation)
+    const toolButtons = document.querySelectorAll('.tool-btn.primary');
+    
+    toolButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            const toolName = this.closest('.tool-card').querySelector('.tool-name').textContent;
+            console.log(`Tool launched: ${toolName}`);
+            // Future: Add analytics tracking here
+        });
+    });
+});
+</script>
+{% endblock %}

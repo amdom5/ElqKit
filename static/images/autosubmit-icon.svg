@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="autosubmitGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="10" y="10" width="100" height="100" rx="20" fill="url(#autosubmitGradient)" opacity="0.1"/>
+  
+  <!-- CSV/Document Icon -->
+  <g transform="translate(20, 25)">
+    <!-- Document -->
+    <path d="M10 0 L50 0 L70 20 L70 70 L10 70 Z" fill="url(#autosubmitGradient)" opacity="0.8"/>
+    <path d="M50 0 L50 20 L70 20" fill="none" stroke="white" stroke-width="2"/>
+    
+    <!-- CSV Lines -->
+    <line x1="20" y1="25" x2="60" y2="25" stroke="white" stroke-width="2" opacity="0.9"/>
+    <line x1="20" y1="35" x2="55" y2="35" stroke="white" stroke-width="2" opacity="0.7"/>
+    <line x1="20" y1="45" x2="50" y2="45" stroke="white" stroke-width="2" opacity="0.7"/>
+    <line x1="20" y1="55" x2="60" y2="55" stroke="white" stroke-width="2" opacity="0.5"/>
+  </g>
+  
+  <!-- Arrow -->
+  <g transform="translate(60, 55)">
+    <path d="M0 5 L15 5" stroke="url(#autosubmitGradient)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M10 0 L15 5 L10 10" stroke="url(#autosubmitGradient)" stroke-width="3" 
+          stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  
+  <!-- API/Cloud Icon -->
+  <g transform="translate(75, 35)">
+    <!-- Cloud shape -->
+    <path d="M15 20 C10 20 5 15 5 10 C5 5 10 0 15 0 C18 0 20 2 22 4 C25 1 28 0 32 0 C37 0 40 5 40 10 C40 12 39 14 37 15 C39 16 40 18 40 20 C40 23 37 25 32 25 L15 25 C10 25 5 22 5 20 Z" 
+          fill="url(#autosubmitGradient)" opacity="0.9"/>
+    
+    <!-- Server lines -->
+    <line x1="12" y1="8" x2="33" y2="8" stroke="white" stroke-width="1.5" opacity="0.8"/>
+    <line x1="12" y1="12" x2="30" y2="12" stroke="white" stroke-width="1.5" opacity="0.6"/>
+    <line x1="12" y1="16" x2="35" y2="16" stroke="white" stroke-width="1.5" opacity="0.8"/>
+  </g>
+</svg>

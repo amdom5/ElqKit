@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="bulkdeleteGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9a56;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffad56;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="10" y="10" width="100" height="100" rx="20" fill="url(#bulkdeleteGradient)" opacity="0.1"/>
+  
+  <!-- Trash Can -->
+  <g transform="translate(35, 25)">
+    <!-- Lid -->
+    <rect x="5" y="8" width="40" height="6" rx="3" fill="url(#bulkdeleteGradient)"/>
+    <rect x="18" y="2" width="14" height="8" rx="2" fill="url(#bulkdeleteGradient)" opacity="0.8"/>
+    
+    <!-- Body -->
+    <path d="M10 14 L40 14 L38 55 C38 58 36 60 33 60 L17 60 C14 60 12 58 12 55 Z" 
+          fill="url(#bulkdeleteGradient)" opacity="0.9"/>
+    
+    <!-- Delete lines -->
+    <line x1="20" y1="22" x2="20" y2="50" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <line x1="25" y1="22" x2="25" y2="50" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <line x1="30" y1="22" x2="30" y2="50" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Multiple items indicator -->
+  <g transform="translate(65, 35)">
+    <circle cx="0" cy="0" r="3" fill="url(#bulkdeleteGradient)" opacity="0.8"/>
+    <circle cx="0" cy="10" r="3" fill="url(#bulkdeleteGradient)" opacity="0.6"/>
+    <circle cx="0" cy="20" r="3" fill="url(#bulkdeleteGradient)" opacity="0.4"/>
+    <circle cx="0" cy="30" r="3" fill="url(#bulkdeleteGradient)" opacity="0.2"/>
+  </g>
+  
+  <!-- Warning triangle -->
+  <g transform="translate(75, 65)">
+    <path d="M10 5 L15 15 L5 15 Z" fill="#ff6b6b" stroke="white" stroke-width="1"/>
+    <circle cx="10" cy="11" r="1" fill="white"/>
+    <line x1="10" y1="8" x2="10" y2="9.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+</svg>

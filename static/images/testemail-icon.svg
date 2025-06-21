@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="testemailGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a8edea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fed6e3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="10" y="10" width="100" height="100" rx="20" fill="url(#testemailGradient)" opacity="0.1"/>
+  
+  <!-- Email Icon -->
+  <g transform="translate(25, 35)">
+    <!-- Envelope -->
+    <rect x="0" y="10" width="50" height="35" rx="3" fill="url(#testemailGradient)" opacity="0.9"/>
+    <path d="M0 13 L25 28 L50 13" stroke="white" stroke-width="2" fill="none" stroke-linejoin="round"/>
+    
+    <!-- Email content lines -->
+    <line x1="8" y1="20" x2="42" y2="20" stroke="white" stroke-width="1.5" opacity="0.7"/>
+    <line x1="8" y1="25" x2="35" y2="25" stroke="white" stroke-width="1.5" opacity="0.5"/>
+    <line x1="8" y1="30" x2="40" y2="30" stroke="white" stroke-width="1.5" opacity="0.7"/>
+  </g>
+  
+  <!-- Multiple emails indicator -->
+  <g transform="translate(70, 25)">
+    <!-- Second email -->
+    <rect x="0" y="5" width="25" height="18" rx="2" fill="url(#testemailGradient)" opacity="0.6"/>
+    <path d="M0 7 L12.5 14 L25 7" stroke="white" stroke-width="1" fill="none"/>
+    
+    <!-- Third email -->
+    <rect x="5" y="0" width="25" height="18" rx="2" fill="url(#testemailGradient)" opacity="0.4"/>
+    <path d="M5 2 L17.5 9 L30 2" stroke="white" stroke-width="1" fill="none"/>
+  </g>
+  
+  <!-- Test/Play button -->
+  <g transform="translate(45, 65)">
+    <circle cx="15" cy="15" r="12" fill="url(#testemailGradient)" opacity="0.8"/>
+    <!-- Play triangle -->
+    <path d="M10 9 L10 21 L20 15 Z" fill="white"/>
+  </g>
+  
+  <!-- Bookmarklet indicator -->
+  <g transform="translate(85, 75)">
+    <!-- Bookmark shape -->
+    <path d="M0 0 L8 0 L8 15 L4 11 L0 15 Z" fill="#4285f4" opacity="0.8"/>
+    <rect x="2" y="3" width="4" height="1" fill="white"/>
+    <rect x="2" y="5" width="4" height="1" fill="white"/>
+  </g>
+</svg>
