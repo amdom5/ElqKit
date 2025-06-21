@@ -4,18 +4,15 @@
 [![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
 [![Python](https://img.shields.io/badge/python-3.11+-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 
-**ElqKit** is a professional-grade web application toolkit designed specifically for Oracle Eloqua marketing automation platform. Built with Flask and modern web technologies, ElqKit provides essential tools to streamline common Eloqua operations and boost marketing team productivity.
+**ElqKit** is a web application toolkit designed specifically for the Oracle Eloqua marketing automation platform.
 
 ## 🎯 Overview
 
 Oracle Eloqua is a powerful marketing automation platform used by enterprises for email marketing, lead generation, and customer journey management. ElqKit addresses common operational challenges by providing:
 
-- **Bulk Data Processing**: Handle large datasets efficiently
+- **Dependency Deletion**: Handle deletion of dependencies that aren't available via the UI
 - **API Automation**: Streamline repetitive API operations  
 - **Testing Utilities**: Simplify testing workflows
-- **Data Management**: Professional-grade data handling tools
-
-**Target Audience**: Marketing operations professionals, Eloqua administrators, marketing technologists, and developers working with Eloqua integrations.
 
 ## ✨ Features
 
@@ -35,32 +32,6 @@ Convert CSV files to HTTP POST requests for Eloqua forms with enterprise-grade r
 2. Configure Site ID and elqFormName
 3. Each CSV row becomes a form submission
 4. Get detailed success/failure results
-
-### 🔄 BulkDelete (Coming Soon)
-Efficiently delete multiple API syncs in Eloqua with safety checks and batch processing.
-
-**Planned Features:**
-- Batch API sync deletion with progress tracking
-- CSV upload support for sync IDs
-- Safety confirmations and rollback options
-- Real-time monitoring and error handling
-
-### 📧 TestEmail (Coming Soon)
-Send multiple test emails using an integrated bookmarklet tool.
-
-**Planned Features:**
-- Browser bookmarklet integration
-- Multiple recipient support
-- CSV upload for batch testing
-- Seamless Eloqua interface integration
-
-## 🛠 Technology Stack
-
-- **Backend**: Python 3.11+, Flask 3.0.0
-- **Frontend**: Vanilla JavaScript (ES6+), HTML5, CSS3  
-- **HTTP Client**: Requests library for reliable API calls
-- **Containerization**: Docker with security-hardened configuration
-- **Design**: Mobile-first responsive design with professional UI/UX
 
 ## 🚀 Quick Start
 
@@ -160,17 +131,6 @@ elqkit/
 └── docs/               # Documentation
 ```
 
-## 🎨 User Interface
-
-ElqKit features a professional, modern interface built with:
-
-- **Design System**: Clean card-based layout with consistent spacing
-- **Color Scheme**: Professional blue primary (#0ea5e9) with semantic colors
-- **Typography**: Inter font family for optimal readability
-- **Icons**: Custom SVG icons for each tool and action
-- **Responsive**: Mobile-first design that works on all devices
-- **Accessibility**: WCAG 2.1 compliant with keyboard navigation
-
 ## 🔒 Security
 
 ElqKit is built with security as a priority:
@@ -183,14 +143,6 @@ ElqKit is built with security as a priority:
 - **Secret Management**: Environment variable configuration
 
 For detailed security information, see [SECURITY.md](SECURITY.md).
-
-## 📊 Performance
-
-- **File Processing**: Handles up to 5MB CSV files efficiently
-- **Memory Footprint**: ~256MB container usage
-- **Request Handling**: Threaded Flask with 10-second timeouts
-- **Error Recovery**: Comprehensive retry logic and error reporting
-- **Health Monitoring**: Built-in container health checks
 
 ## 🔧 Configuration
 
@@ -240,40 +192,6 @@ pip install -r requirements.txt
 python app.py
 ```
 
-### Code Structure
-
-- **Modular Routes**: Each tool has its own blueprint in `/routes/`
-- **Template Inheritance**: Base template with tool-specific extensions
-- **Static Assets**: Organized CSS, JavaScript, and image files
-- **Configuration**: Environment-based configuration management
-
-## 🚦 API Endpoints
-
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/` | GET | Landing page with tool overview |
-| `/autosubmit` | GET | AutoSubmit tool interface |
-| `/autosubmit/upload` | POST | Process CSV file for form submissions |
-| `/bulkdelete` | GET | BulkDelete tool (coming soon) |
-| `/testemail` | GET | TestEmail tool (coming soon) |
-
-## 🤝 Contributing
-
-We welcome contributions! Please:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Development Guidelines
-
-- Follow PEP 8 for Python code
-- Use semantic commit messages
-- Add tests for new features
-- Update documentation as needed
-- Ensure Docker builds successfully
 
 ## 📋 Requirements
 
@@ -282,41 +200,6 @@ We welcome contributions! Please:
 - Docker Engine 20.10+
 - 512MB RAM minimum
 - 1GB disk space
-
-### Browser Support
-- Chrome/Edge 88+
-- Firefox 85+
-- Safari 14+
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## 🗺 Roadmap
-
-### v1.1 (Coming Soon)
-- [ ] BulkDelete tool implementation
-- [ ] Enhanced error reporting
-- [ ] API rate limiting
-- [ ] Advanced CSV validation
-
-### v1.2 (Planned)
-- [ ] TestEmail bookmarklet tool
-- [ ] User authentication
-- [ ] Usage analytics
-- [ ] API documentation
-
-### v2.0 (Future)
-- [ ] Multi-tenant support
-- [ ] Database integration
-- [ ] Advanced workflow automation
-- [ ] REST API for integrations
-
-## 📝 Changelog
-
-### v1.0.0 (Current)
-- ✅ AutoSubmit tool with CSV processing
-- ✅ Professional UI/UX with responsive design
-- ✅ Docker deployment with security hardening
-- ✅ Comprehensive documentation
-- ✅ Production-ready architecture
 
 ## 🆘 Support
 
@@ -332,25 +215,6 @@ We welcome contributions! Please:
 2. **Permission denied**: Check file permissions with `sudo chown -R $USER:$USER .`
 3. **Container won't start**: Check logs with `docker logs elqkit`
 4. **Health check failing**: Verify application is responding on configured port
-
-**Getting Help:**
-- Check existing [GitHub Issues](https://github.com/amdom5/ElqKit/issues)
-- Review application logs: `docker logs elqkit -f`
-- Verify Docker and Docker Compose versions
-- Ensure all environment variables are properly set
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Oracle Eloqua team for the powerful marketing automation platform
-- Flask community for the excellent web framework
-- Docker team for containerization technology
-- Contributors and users who help improve ElqKit
-
----
 
 **Made with ❤️ for the Eloqua community**
 
